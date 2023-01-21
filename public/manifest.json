@@ -13,5 +13,8 @@
     "48": "logo192.png",
     "128": "logo192.png"
   },
-  "permissions": []
+  "permissions": ["scripting", "storage", "http://*/", "https://*/"],
+  "host_permissions": [
+    "http://*/", "https://*/"
+   ]
 }

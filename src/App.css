@@ -1,1 +1,11 @@
-
+.app {
+  width: 350px;
+  height: 350px;
+  padding: 12px 24px;
+}
+.input-box {
+  margin-bottom: 12px;
+}
+.list {
+  margin-bottom: 12px;
+}
