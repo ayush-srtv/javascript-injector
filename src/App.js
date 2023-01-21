@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [libs, setLibs] = useState([]);
+  
+  useEffect(() => {
+    fetch('https://api.cdnjs.com/libraries')
+    .then((response) =>response.json())
+    .then((data) =>setLibs(data.results));
+
+  }, []);
+
+  return (<>
+  <input type="search" />
+  <ul>
+    {
+      libs.map((lib) =><li key={lib.name}>{lib.name}</li>)
+    }
+  </ul>
+  </>);
 }
 
 export default App;

@@ -1,11 +1,10 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Javascript Injector",
   "description": "JS Injector tool, injects js directly from cdn",
   "version": "1.0",
-
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "Javascript Injector"
   },
@@ -14,6 +13,5 @@
     "48": "logo192.png",
     "128": "logo192.png"
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "permissions": []
 }
