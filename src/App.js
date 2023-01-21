@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Input, List, Typography } from 'antd';
 import './App.css';
-import { changeConfirmLocale } from 'antd/es/modal/locale';
 
 function App() {
   const [libs, setLibs] = useState([]);
@@ -44,21 +43,26 @@ function App() {
         <List.Item>
           <div style={{cursor: "pointer"}} onClick={() => {
             function getItem() {
-              return item.latest;
+              return item;
             }
             global.chrome.tabs.query({active:true}, (tabs) => {
               const [tab] = tabs;
               global.chrome.scripting.executeScript({
                 target : {tabId : tab.id},
-                func : function (url) {
+                world: 'MAIN',
+                func : function (item) {
                     const s = document.createElement("script");
                     s.type = "text/javascript";
-                    s.src = url;
+                    s.src = item.latest;
                     document.body.append(s);
+                    console.log(`${item.name} is loaded`);
                 },
                 args: [getItem()]
               })
-              .then(() => console.log("script injected"));
+              .then(() =>  {
+                setSearch("");
+                console.log("script injected");
+              });
             });
           }}>{item.name}</div>
         </List.Item>
