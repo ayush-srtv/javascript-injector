@@ -1,19 +1,19 @@
 {
   "manifest_version": 3,
 
-  "name": "Javascript Injector",
+  "name": "JSBEE Javascript Injector",
   "description": "JS Injector tool, injects js directly from cdn",
-  "version": "1.0",
+  "version": "1.0.0",
   "action": {
     "default_popup": "index.html",
     "default_title": "Javascript Injector"
   },
   "icons": {
-    "16": "logo192.png",
-    "48": "logo192.png",
-    "128": "logo192.png"
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
   },
-  "permissions": ["scripting", "storage", "http://*/", "https://*/"],
+  "permissions": ["scripting"],
   "host_permissions": ["http://*/", "https://*/"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; script-src-elem 'self' https://*/ ; object-src 'self' 'wasm-unsafe-eval'"

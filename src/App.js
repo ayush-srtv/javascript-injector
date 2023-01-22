@@ -24,7 +24,7 @@ function App() {
 
   return (<div class="app">
     <Typography.Title level={2} style={{textAlign: 'center'}}>
-      Javascript Injector
+      JSBEE Javascript Injector
     </Typography.Title>
   <Input {...searchConfig} />
   <div
