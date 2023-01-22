@@ -1,6 +1,6 @@
 # Javscript Injector
 
-Javascript Injector tool to inject cdn js packages into browser.
+Javascript Injector tool to inject cdn packages into browser.
 
 ## Available Scripts
 
