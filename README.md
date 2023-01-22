@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Javscript Injector
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Javascript Injector tool to inject cdn js packages into browser.
 
 ## Available Scripts
 
